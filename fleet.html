@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fleet & Machinery | Shree Govind Construction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Styles for Fleet Page */
+        .fleet-gallery-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .fleet-gallery-img:hover {
+            transform: scale(1.03);
+        }
+        /* Action Slider Styles */
+        .action-carousel-item {
+            height: 500px;
+        }
+        .action-carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="SHREE GOVIND">
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-dark rounded-0 btn-sm">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light py-5 mt-5">
+        <div class="container mt-4">
+            <h1 class="display-4 fw-bold">Our Machinery Fleet</h1>
+            <p class="lead text-muted">Advanced Hydraulic Rigs & Support Equipment.</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        
+        <h2 class="mb-4 fw-bold text-primary">Technical Inventory</h2>
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <table class="table table-striped table-hover shadow-sm border">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Equipment Category</th>
+                            <th>Model</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Hydraulic Piling Rig</td><td>XCMG 220</td><td>1</td></tr>
+                        <tr><td>Hydraulic Piling Rig</td><td>XCMG 210</td><td>2</td></tr>
+                        <tr><td>Hydraulic Piling Rig</td><td>Sany 185</td><td>2</td></tr>
+                        <tr><td>Hydraulic Piling Rig</td><td>Sany 155</td><td>2</td></tr>
+                        <tr><td>Concrete Equip</td><td>RMC Plants</td><td>2</td></tr>
+                        <tr><td>Lifting Equip</td><td>Hydra Farana</td><td>1</td></tr>
+                        <tr><td>Drilling</td><td>TMR & Rotary Machine</td><td>3</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 class="mb-4 fw-bold text-primary">Fleet Overview</h2>
+        <p class="text-muted mb-4">A closer look at our heavy-duty piling machinery.</p>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <img src="images/fleet-view-1.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Fleet+Image+1'" class="fleet-gallery-img" alt="Machine 1">
+            </div>
+            <div class="col-md-4">
+                <img src="images/fleet-view-2.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Fleet+Image+2'" class="fleet-gallery-img" alt="Machine 2">
+            </div>
+            <div class="col-md-4">
+                <img src="images/fleet-view-3.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Fleet+Image+3'" class="fleet-gallery-img" alt="Machine 3">
+            </div>
+        </div>
+
+        <h2 class="mb-4 fw-bold text-primary">Machinery In Action</h2>
+        <div id="actionCarousel" class="carousel slide carousel-fade shadow rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#actionCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#actionCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#actionCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active action-carousel-item">
+                    <img src="images/action-1.jpg" onerror="this.src='images/slider1.jpg'" class="d-block w-100" alt="Action 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>High Precision Drilling</h5>
+                        <p>Our rigs operating in challenging soil conditions.</p>
+                    </div>
+                </div>
+                <div class="carousel-item action-carousel-item">
+                    <img src="images/action-2.jpg" onerror="this.src='images/slider2.jpg'" class="d-block w-100" alt="Action 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Site Operations</h5>
+                        <p>Full deployment for bridge foundation work.</p>
+                    </div>
+                </div>
+                <div class="carousel-item action-carousel-item">
+                    <img src="images/action-3.jpg" onerror="this.src='images/slider3.jpg'" class="d-block w-100" alt="Action 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Heavy Lifting</h5>
+                        <p>Efficient material handling and cage lowering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#actionCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#actionCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white py-4 text-center mt-5">
+        <div class="container">
+            <p class="small mb-0 opacity-75">&copy; 2025 Shree Govind Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

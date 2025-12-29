@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio | Shree Govind Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Styles for Portfolio Cards */
+        .portfolio-card {
+            border: 1px solid #eee;
+            background: #fff;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-color: var(--brand-blue);
+        }
+        .portfolio-img-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .portfolio-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .portfolio-card:hover .portfolio-img-wrapper img {
+            transform: scale(1.1);
+        }
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+        .bg-ongoing { background-color: #ffc107; color: #333; } /* Yellow for Ongoing */
+        .bg-completed { background-color: #28a745; } /* Green for Completed */
+        
+        .portfolio-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .client-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .project-loc {
+            font-size: 0.9rem;
+            color: var(--brand-blue);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="SHREE GOVIND">
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-dark rounded-0 btn-sm">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light py-5 mt-5">
+        <div class="container mt-4">
+            <h6 class="text-primary fw-bold">OUR EXPERIENCE</h6>
+            <h1 class="display-4 fw-bold">Project Portfolio</h1>
+            <p class="lead text-muted">Delivering excellence across Railway, Metro, and Highway sectors with precision engineering.</p>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex align-items-center mb-4">
+                <h2 class="fw-bold mb-0">Ongoing Projects</h2>
+                <div class="ms-3 flex-grow-1 border-bottom"></div>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-ongoing">Ongoing</span>
+                            <img src="images/proj-etawah-bypass.jpg" onerror="this.src='images/slider1.jpg'" alt="Etawah Bypass">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: Mehrotra Buildcon (MBPL)</span>
+                            <h3 class="h4 fw-bold">Etawah Bypass (NCR)</h3>
+                            <div class="project-loc"><i class="fas fa-map-marker-alt me-2"></i>Etawah, Uttar Pradesh</div>
+                            <p class="text-muted small">Construction of Viaduct including ROB over main line track and Major/Minor bridges. We are executing deep pile foundations, fabrication, and launching of steel girders for the North Central Railway division.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-ongoing">Ongoing</span>
+                            <img src="images/proj-jabalpur.jpg" onerror="this.src='images/slider2.jpg'" alt="Jabalpur ROB">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: GRTC (Madhya Pradesh)</span>
+                            <h3 class="h4 fw-bold">Jabalpur-Nainpur ROB</h3>
+                            <div class="project-loc"><i class="fas fa-map-marker-alt me-2"></i>Jabalpur, Madhya Pradesh</div>
+                            <p class="text-muted small">Execution of Railway Over Bridge (Level Crossing No. GJ-152) on EPC Mode. Scope includes Piling, Boring, Density Checking, Flushing, and Concreting up to Cut-off Level for heavy rail infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-ongoing">Ongoing</span>
+                            <img src="images/proj-jaipur-ring.jpg" onerror="this.src='images/slider3.jpg'" alt="Jaipur Ring Road">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: SPPL (Haryana)</span>
+                            <h3 class="h4 fw-bold">Jaipur Ring Road Project</h3>
+                            <div class="project-loc"><i class="fas fa-map-marker-alt me-2"></i>Jaipur, Rajasthan</div>
+                            <p class="text-muted small">Major infrastructure development connecting Tonk Road to Ajmer Road. We are executing large diameter (1200 mm) Cast-in-Situ Bored Piles using our advanced Hydraulic Matt Machines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-ongoing">Ongoing</span>
+                            <img src="images/proj-mator-highway.jpg" onerror="this.src='images/slider4.jpg'" alt="Highway Piling">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: NEPL (New Delhi)</span>
+                            <h3 class="h4 fw-bold">Mator to Barodameo Highway</h3>
+                            <div class="project-loc"><i class="fas fa-map-marker-alt me-2"></i>Alwar, Rajasthan</div>
+                            <p class="text-muted small">Construction of Six Lane Access Controlled Highway under Bharat Mala Pariyojana. Installation of high-capacity RCC Piles using Hydraulic Rigs for flyovers and interchanges.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex align-items-center mb-4">
+                <h2 class="fw-bold mb-0">Completed Works</h2>
+                <div class="ms-3 flex-grow-1 border-bottom"></div>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-completed">Completed</span>
+                            <img src="images/proj-etawah-rob.jpg" onerror="this.src='images/slider1.jpg'" alt="NCR Project">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: MBPL</span>
+                            <h5 class="fw-bold">Etawah-Kanpur NCR</h5>
+                            <div class="project-loc small"><i class="fas fa-map-marker-alt me-1"></i>Uttar Pradesh</div>
+                            <p class="text-muted small mt-2">Executed extensive Pile Work with Hydraulic Rigs for 4 major ROBs. Successfully handed over to North Central Railways.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-completed">Completed</span>
+                            <img src="images/proj-sabarmati.jpg" onerror="this.src='images/slider4.jpg'" alt="Sabarmati">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: SCC Infrastructure</span>
+                            <h5 class="fw-bold">Sabarmati Yard (HSR)</h5>
+                            <div class="project-loc small"><i class="fas fa-map-marker-alt me-1"></i>Ahmedabad, Gujarat</div>
+                            <p class="text-muted small mt-2">High-precision Pile Drilling for the High Speed Rail (Bullet Train) / Metro Yard project at D-Cabin, Chandkheda.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-completed">Completed</span>
+                            <img src="images/proj-ganga-bridge.jpg" onerror="this.src='images/slider3.jpg'" alt="Ganga Bridge">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: GPT Infraprojects</span>
+                            <h5 class="fw-bold">Prayagraj Southern Bypass</h5>
+                            <div class="project-loc small"><i class="fas fa-map-marker-alt me-1"></i>Uttar Pradesh</div>
+                            <p class="text-muted small mt-2">Major Bridge on Ganga Sangam. Executed 1000mm Dia Piles for the 4-Lane NH(O) EPC Mode project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-completed">Completed</span>
+                            <img src="images/proj-haryana-rail.jpg" onerror="this.src='images/slider2.jpg'" alt="Haryana Rail">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: MBPL</span>
+                            <h5 class="fw-bold">Haryana Orbital Rail</h5>
+                            <div class="project-loc small"><i class="fas fa-map-marker-alt me-1"></i>Haryana</div>
+                            <p class="text-muted small mt-2">Connecting Palwal to Sonipat via Sohna-Manesar-Kharkhoda. Executed Piling and Tunnel related foundation works for this Broad Gauge Double Line.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img-wrapper">
+                            <span class="project-badge bg-completed">Completed</span>
+                            <img src="images/proj-chambal.jpg" onerror="this.src='images/slider3.jpg'" alt="Chambal Bridge">
+                        </div>
+                        <div class="portfolio-body">
+                            <span class="client-label">Client: Jyoti Builders</span>
+                            <h5 class="fw-bold">Chambal River Bridge</h5>
+                            <div class="project-loc small"><i class="fas fa-map-marker-alt me-1"></i>Kota, Rajasthan</div>
+                            <p class="text-muted small mt-2">Construction of High-Level Bridge across River Chambal near Jharel Ke Balaji. Executed deep foundations in riverbed rock strata.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="small mb-0 opacity-75">&copy; 2025 Shree Govind Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Media | Shree Govind Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-header {
+            background: linear-gradient(rgba(0,42,74,0.9), rgba(0,42,74,0.8)), url('images/slider2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            margin-top: 80px;
+        }
+        .blog-post {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+        .blog-post:last-child { border-bottom: none; }
+        
+        .blog-img-wrapper {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .blog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .blog-img-wrapper:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="SHREE GOVIND">
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-dark rounded-0 btn-sm">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="news-header text-center">
+        <div class="container">
+            <span class="badge bg-primary mb-3">MEDIA CENTER</span>
+            <h1 class="display-4 fw-bold">Latest Updates</h1>
+            <p class="lead text-white-50">Company News & Operational Updates</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    
+                    <article class="blog-post">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-danger rounded-0 px-3 py-2">Humanitarian Operation</span>
+                            <small class="text-muted ms-3"><i class="far fa-calendar-alt me-2"></i>Recent Update</small>
+                        </div>
+                        
+                        <h2 class="fw-bold mb-4">Deployment of Mait Machine for Rescue Operation in Kotputli</h2>
+                        
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="blog-img-wrapper">
+                                    <img src="images/news-rescue-1.jpg" onerror="this.src='https://via.placeholder.com/600x400?text=Rescue+Operation+1'" alt="Rescue Site">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="blog-img-wrapper">
+                                    <img src="images/news-rescue-2.jpg" onerror="this.src='https://via.placeholder.com/600x400?text=Rescue+Operation+2'" alt="Drilling Operation">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lead text-dark mb-4">
+                            In a recent incident in Kotputli, Rajasthan, Shree Govind Construction deployed its specialized <strong>Mait Hydraulic Piling Rig</strong> to assist in a borewell rescue operation.
+                        </div>
+
+                        <p>The authorities initially engaged the NDRF team for the rescue using traditional methods. However, as the situation required deeper access through difficult soil, our heavy-duty machinery was called in during the later stages to expedite the process.</p>
+                        
+                        <p>Our team mobilized immediately upon request, demonstrating the capability of this advanced machinery to create parallel access tunnels in emergency scenarios. We utilized the full power of the rig to assist the administration in their efforts.</p>
+
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-success rounded-0 px-3 py-2">Fleet Update</span>
+                            <small class="text-muted ms-3"><i class="far fa-calendar-alt me-2"></i>New Arrival</small>
+                        </div>
+
+                        <h2 class="fw-bold mb-4">Strengthening Capability: New XCMG Rig Added to Fleet</h2>
+                        
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="blog-img-wrapper">
+                                    <img src="images/news-fleet-1.jpg" onerror="this.src='images/slider1.jpg'" alt="New XCMG Rig View 1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="blog-img-wrapper">
+                                    <img src="images/news-fleet-2.jpg" onerror="this.src='images/slider2.jpg'" alt="New XCMG Rig View 2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lead text-dark mb-3">
+                            We are proud to announce the addition of a brand new <strong>XCMG 220 Hydraulic Piling Rig</strong> to our inventory.
+                        </div>
+
+                        <p>This strategic acquisition significantly boosts our capacity to handle complex hard rock drilling projects. The XCMG 220 is designed for deep foundation works, making it ideal for our upcoming metro and river bridge contracts.</p>
+                        
+                        <p>With higher torque and faster drilling speeds, this new rig aligns perfectly with our commitment to timely project delivery and precision engineering.</p>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="small mb-0 opacity-75">&copy; 2025 Shree Govind Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

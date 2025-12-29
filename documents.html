@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Credentials | Shree Govind Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- DOCUMENT SPECIFIC STYLES --- */
+        .doc-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--brand-blue);
+        }
+        
+        /* Thumbnail Preview */
+        .doc-preview {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .doc-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top; /* Shows the header/logo of the document */
+            transition: 0.5s;
+            opacity: 0.9;
+        }
+        .doc-card:hover .doc-preview img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        
+        /* Zoom Icon Overlay */
+        .doc-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 94, 184, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .doc-card:hover .doc-overlay { opacity: 1; }
+        .doc-overlay i {
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Modal / Popup Viewer */
+        .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+        .modal-body {
+            padding: 0;
+            background: transparent;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .btn-close-white {
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            background-color: white;
+            opacity: 1;
+            border-radius: 50%;
+            z-index: 1056;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="SHREE GOVIND">
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-dark rounded-0 btn-sm">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light py-5 mt-5">
+        <div class="container mt-4">
+            <h6 class="text-primary fw-bold">CREDENTIALS</h6>
+            <h1 class="display-4 fw-bold">Certificates & Approvals</h1>
+            <p class="lead text-muted">Official Work Performance Certificates and Letters of Acceptance (LOA) from our esteemed clients.</p>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            
+            <h3 class="fw-bold mb-4 text-success border-bottom pb-2">Completion Certificates</h3>
+            <div class="row g-4 mb-5">
+                
+                <div class="col-md-4">
+                    <div class="doc-card">
+                        <div class="doc-preview" data-bs-toggle="modal" data-bs-target="#modalCertMBPL">
+                            <img src="images/cert-mbpl-1.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Certificate+Page+1'" alt="MBPL Certificate">
+                            <div class="doc-overlay"><i class="fas fa-images"></i></div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Mehrotra Buildcon (MBPL)</h5>
+                            <p class="text-muted small mb-2"><strong>Project:</strong> Etawah-Kanpur NCR (4 ROBs)</p>
+                            <span class="badge bg-success">Performance Certificate</span>
+                            <button class="btn btn-sm btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCertMBPL">View 2 Pages</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="fw-bold mb-4 text-primary border-bottom pb-2">Letters of Acceptance (LOA)</h3>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="doc-card">
+                        <div class="doc-preview" data-bs-toggle="modal" data-bs-target="#modalLoaSCC">
+                            <img src="images/loa-scc-1.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=LOA+Page+1'" alt="SCC LOA">
+                            <div class="doc-overlay"><i class="fas fa-images"></i></div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">SCC Infrastructure</h5>
+                            <p class="text-muted small mb-2"><strong>Project:</strong> Sabarmati Yard (HSR)</p>
+                            <span class="badge bg-primary">Work Order</span>
+                            <button class="btn btn-sm btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalLoaSCC">View 2 Pages</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="doc-card">
+                        <div class="doc-preview" data-bs-toggle="modal" data-bs-target="#modalLoaGPT">
+                            <img src="images/loa-gpt-1.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=LOA+Page+1'" alt="GPT LOA">
+                            <div class="doc-overlay"><i class="fas fa-images"></i></div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">GPT Infraprojects</h5>
+                            <p class="text-muted small mb-2"><strong>Project:</strong> Prayagraj Southern Bypass</p>
+                            <span class="badge bg-primary">Work Order</span>
+                            <button class="btn btn-sm btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalLoaGPT">View 2 Pages</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="doc-card">
+                        <div class="doc-preview" data-bs-toggle="modal" data-bs-target="#modalLoaMBPL">
+                            <img src="images/loa-mbpl-1.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=LOA+Page+1'" alt="MBPL LOA">
+                            <div class="doc-overlay"><i class="fas fa-images"></i></div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">MBPL (Haryana)</h5>
+                            <p class="text-muted small mb-2"><strong>Project:</strong> Orbital Rail Corridor</p>
+                            <span class="badge bg-primary">Work Order</span>
+                            <button class="btn btn-sm btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalLoaMBPL">View 2 Pages</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalCertMBPL" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div id="carouselCertMBPL" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/cert-mbpl-1.jpg" class="d-block w-100" alt="Certificate Page 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/cert-mbpl-2.jpg" class="d-block w-100" alt="Certificate Page 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertMBPL" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCertMBPL" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLoaSCC" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div id="carouselSCC" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/loa-scc-1.jpg" class="d-block w-100" alt="Page 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/loa-scc-2.jpg" class="d-block w-100" alt="Page 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSCC" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSCC" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLoaGPT" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div id="carouselGPT" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/loa-gpt-1.jpg" class="d-block w-100" alt="Page 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/loa-gpt-2.jpg" class="d-block w-100" alt="Page 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGPT" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselGPT" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLoaMBPL" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div id="carouselMBPL" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/loa-mbpl-1.jpg" class="d-block w-100" alt="Page 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/loa-mbpl-2.jpg" class="d-block w-100" alt="Page 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMBPL" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMBPL" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 text-center mt-5">
+        <div class="container">
+            <p class="small mb-0 opacity-75">&copy; 2025 Shree Govind Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

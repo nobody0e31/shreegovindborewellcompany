@@ -1,0 +1,220 @@
+/* =========================================
+   SHREE GOVIND - FINAL POLISHED THEME
+   ========================================= */
+
+/* --- 1. FONTS & VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --brand-blue: #005eb8;       /* Primary Corporate Blue */
+    --brand-dark: #002a4a;       /* Deep Navy */
+    --brand-accent: #00a3e0;     /* Highlight Blue */
+    --text-main: #333333;        /* Dark Grey for Text */
+    --text-light: #666666;       /* Light Grey */
+    --bg-light: #f4f7f6;         /* Modern Off-White */
+    --white: #ffffff;
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.05);
+    --shadow-hover: 0 15px 30px rgba(0,0,0,0.1);
+    --font-head: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* --- 2. GLOBAL RESET --- */
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+    padding-top: 120px; /* INCREASED: Accommodates Top Bar (30px) + Navbar (90px) */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-head);
+    color: var(--brand-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+a { text-decoration: none !important; transition: all 0.3s ease; }
+ul { list-style: none; padding: 0; margin: 0; }
+section { padding: 80px 0; position: relative; }
+
+/* --- 3. NAVIGATION (Clean & Sharp) --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    padding: 0;
+    height: 90px;
+    transition: all 0.4s ease;
+}
+
+/* Ensure the header stays on top */
+header.fixed-top {
+    z-index: 1030;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-brand img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s;
+}
+
+.nav-link {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--brand-dark) !important;
+    padding: 0 20px !important;
+    letter-spacing: 0.5px;
+    position: relative;
+    top: 2px;
+}
+
+.nav-link:hover, .nav-link.active { color: var(--brand-blue) !important; }
+
+.nav-link::after {
+    content: ''; position: absolute; bottom: -5px; left: 20px; width: 0; height: 2px;
+    background: var(--brand-blue); transition: width 0.3s;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 30px; }
+
+.btn-brand {
+    background: var(--brand-blue); color: white; padding: 10px 25px;
+    font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
+    border: 2px solid var(--brand-blue); border-radius: 0;
+}
+.btn-brand:hover { background: white; color: var(--brand-blue); }
+
+/* --- 4. HERO SECTION --- */
+.hero-section {
+    position: relative; height: 85vh; overflow: hidden; background: #000; margin-top: -10px;
+}
+#heroCarousel, .carousel-inner, .carousel-item { height: 100%; }
+.carousel-item img { height: 100%; width: 100%; object-fit: cover; }
+
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,30,60,0.85), rgba(0,94,184,0.3));
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 2; bottom: 0; top: 0; left: 0; right: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    text-align: left; padding-bottom: 50px;
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem; font-weight: 800; text-transform: uppercase; color: white;
+    line-height: 1.1; margin-bottom: 20px; text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.carousel-caption p {
+    font-size: 1.25rem; color: rgba(255,255,255,0.95); font-weight: 300;
+    border-left: 4px solid var(--brand-accent); padding-left: 20px;
+}
+
+/* Animations */
+.anim-1, .anim-2, .anim-3, .anim-4 { opacity: 0; transform: translateY(30px); }
+.carousel-item.active .anim-1 { animation: fadeInUp 0.8s ease forwards 0.2s; }
+.carousel-item.active .anim-2 { animation: fadeInUp 0.8s ease forwards 0.4s; }
+.carousel-item.active .anim-3 { animation: fadeInUp 0.8s ease forwards 0.6s; }
+.carousel-item.active .anim-4 { animation: fadeInUp 0.8s ease forwards 0.8s; }
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+/* --- 5. SECTIONS --- */
+.section-header { margin-bottom: 50px; }
+.section-header h6 { color: var(--brand-blue); letter-spacing: 2px; font-size: 0.9rem; }
+.section-header h2 { font-size: 2.5rem; color: var(--brand-dark); }
+.section-header .line { width: 60px; height: 4px; background: var(--brand-blue); margin: 15px 0; }
+
+/* Client Strip */
+.client-strip { background: #fff; border-bottom: 1px solid #eee; padding: 40px 0; }
+.client-box {
+    opacity: 0.6; filter: grayscale(100%); transition: 0.4s;
+    display: flex; align-items: center; justify-content: center; height: 60px;
+}
+.client-box:hover { opacity: 1; filter: grayscale(0); transform: scale(1.1); }
+.client-box h4 { font-size: 1.5rem; color: #888; font-weight: 800; margin: 0; }
+
+/* Service Cards */
+.service-card {
+    background: white; padding: 40px 30px; border: 1px solid #eee; text-align: center;
+    transition: 0.4s; height: 100%; position: relative; overflow: hidden;
+}
+.service-card:hover {
+    background: var(--brand-blue); transform: translateY(-5px); 
+    box-shadow: var(--shadow-hover); border-color: var(--brand-blue);
+}
+.service-card h4 { font-size: 1.2rem; margin: 20px 0; transition: 0.3s; }
+.service-card p { font-size: 0.9rem; color: var(--text-light); transition: 0.3s; }
+.service-icon { font-size: 3rem; color: var(--brand-blue); transition: 0.3s; }
+.service-card:hover h4, .service-card:hover p, .service-card:hover .service-icon { color: white; }
+
+/* Key Strengths */
+.strength-card {
+    background: #fff; padding: 35px 25px; border: 1px solid #eee; border-top: 5px solid var(--brand-blue);
+    border-radius: 4px; transition: 0.3s; height: 100%;
+}
+.strength-card:hover {
+    background: var(--brand-blue) !important; transform: translateY(-10px);
+    box-shadow: var(--shadow-hover); border-top-color: white; border-color: var(--brand-blue);
+}
+.strength-card h5 { color: var(--brand-dark); transition: 0.3s; margin-top: 15px; }
+.strength-card p { color: var(--text-light); transition: 0.3s; font-size: 0.9rem; }
+.strength-card i { font-size: 2.5rem; color: var(--brand-blue); transition: 0.3s; }
+.strength-card:hover h5, .strength-card:hover p, .strength-card:hover i { color: white !important; }
+
+/* Fleet Section */
+.fleet-counter {
+    background: var(--brand-blue); color: white; padding: 30px; text-align: center; 
+    border-radius: 4px; box-shadow: var(--shadow-card);
+}
+.fleet-counter h3 { color: white; font-size: 3rem; font-weight: 800; margin: 0; }
+.fleet-table { width: 100%; border-collapse: collapse; background: white; box-shadow: var(--shadow-card); }
+.fleet-table th { background: var(--brand-dark); color: white; padding: 15px; font-size: 0.9rem; text-transform: uppercase; }
+.fleet-table td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+
+/* News Cards */
+.news-card {
+    border: none; background: white; transition: 0.3s; border-radius: 0;
+    box-shadow: var(--shadow-card); cursor: pointer; height: 100%;
+}
+.news-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.news-img { height: 220px; object-fit: cover; width: 100%; transition: 0.5s; }
+.news-card:hover .news-img { transform: scale(1.05); }
+.news-date-badge {
+    position: absolute; top: 15px; left: 15px; background: #dc3545; color: white;
+    padding: 5px 10px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+}
+
+/* --- 6. FOOTER --- */
+footer { background: #1a1a1a; color: #999; padding: 70px 0 20px; font-size: 0.9rem; }
+footer h4 { color: white; margin-bottom: 25px; font-size: 1.1rem; }
+footer p i { color: var(--brand-blue); width: 25px; }
+footer a { color: #999; margin-bottom: 10px; display: block; }
+footer a:hover { color: white; padding-left: 5px; }
+.footer-bottom { border-top: 1px solid #333; margin-top: 50px; padding-top: 20px; text-align: center; }
+
+/* --- 7. SCROLL REVEAL --- */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body { padding-top: 100px; }
+    .navbar-brand img { height: 50px; }
+    .navbar { height: 70px; }
+}
